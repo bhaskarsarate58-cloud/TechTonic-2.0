@@ -8,7 +8,12 @@ using namespace std;
 
 double calculateFinalAmount(double amount, int customerType) {
     //Part A
-
+if (amount < 0) {
+        cout << "Invalid amount!" << endl;
+        return -1;
+    }
+    double tax = 0.18 * amount; // 18% tax
+    double total = amount + tax;
 
     //Part B
     if (customerType == 1) {           // Regular Customer
